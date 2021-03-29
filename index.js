@@ -11,13 +11,13 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // CORS
-/*const options = {
-    origin: 'https://nomdedomaine.herokuapp.com/'}
+const options = {
+    origin: 'https://switchecommerce.netlify.app/'}
 
-//app.use(cors(options));
-*/
+app.use(cors(options));
 
-app.use(cors('*'));
+
+// app.use(cors('*'));
 
 // parser json which gets the payload and transforms it into a js object available under request.body
 app.use(express.json());
