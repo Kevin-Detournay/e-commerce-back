@@ -3,18 +3,18 @@ const cors = require('cors');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 4000;
-
-const router = require('./app/router.js')
-const sanitizer = require('./app/services/bodySanitizer');
-app.use(express.urlencoded({ extended: true }));
-
-
-
 // CORS
 const options = {
     origin: 'https://switchecommerce.netlify.app/'}
 
 app.use(cors(options));
+
+const sanitizer = require('./app/services/bodySanitizer');
+app.use(express.urlencoded({ extended: true }));
+const router = require('./app/router.js')
+
+
+
 
 
 // app.use(cors('*'));
