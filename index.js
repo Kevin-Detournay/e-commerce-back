@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS
 const options = {
-    origin: 'https://switchecommerce.netlify.app/'}
+    origin: 'https://switchecommerce.netlify.app'}
 
 app.use(cors(options));
 
